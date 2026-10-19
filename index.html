@@ -25,6 +25,8 @@
 @media (prefers-color-scheme:dark){:root{
   --bg:#0f1b17;--surface:#16261f;--line:#2a3d34;--fg:#efe6cf;--muted:#a3b2a8;--gold:#e0bf74;--gold-soft:#3a3120;--brand:#e0bf74;--on-brand:#14231d;--ls:21%;--li:84%;--lm:66%;
   --warn:#f2c462;--warn-soft:#3d2f0e;--bad:#ff8a80;--bad-soft:#45201d;--ok:#6fd6a6;--ok-soft:#143526;color-scheme:dark}}
+@font-face{font-family:"LuScript";src:url("fonts/chorus.woff") format("woff");font-display:swap}
+@font-face{font-family:"LuSans";src:url("fonts/poppins-medium.woff") format("woff");font-weight:500;font-display:swap}
 [hidden]{display:none!important}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 var(--font);-webkit-text-size-adjust:100%}
@@ -94,8 +96,8 @@ input[type=text],input[type=password],input[type=date],input[type=time],input[ty
 .empty{border:1px dashed var(--line);border-radius:14px;padding:14px;color:var(--muted)}
 
 .brandbar{display:flex;align-items:center;gap:11px;background:#1f3b33;color:#f7efd9;border-radius:18px;padding:10px 10px 10px 12px}
-.brandbar .lm{width:42px;height:42px;border-radius:50%;border:1.5px solid #d9b56c;display:grid;place-items:center;font:600 17px/1 var(--display);color:#e8c983;letter-spacing:-.5px;flex:none}
-.brandbar b{font:600 20px/1.1 var(--display);display:block}.brandbar small{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#d9b56c;margin-top:3px;font-weight:600}
+.brandbar .lm{width:44px;height:44px;border-radius:50%;border:1.5px solid #d9b56c;display:grid;place-items:center;font:400 22px/1 "LuScript",var(--display);color:#e8c983;flex:none;padding-top:2px}
+.brandbar b{font:400 27px/1 "LuScript",var(--display);display:block;color:#f7efd9}.brandbar small{display:block;font:500 10px/1 "LuSans",var(--font);letter-spacing:.3em;text-transform:uppercase;color:#d9b56c;margin-top:5px}
 .brandbar .iconbtn{background:transparent;border-color:rgba(217,181,108,.55);color:#e8c983;margin-left:auto}
 .week{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
 .day{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:6px 0 7px;display:flex;flex-direction:column;align-items:center;gap:1px;cursor:pointer}

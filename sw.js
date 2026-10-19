@@ -1,5 +1,5 @@
-const CACHE="estudos-6a-v3";
-const FILES=["./","index.html","seed.json","manifest.json","icon-180.png","icon-192.png","icon-512.png"];
+const CACHE="estudos-6a-v4";
+const FILES=["./","index.html","seed.json","manifest.json","icon-180.png","icon-192.png","icon-512.png","fonts/chorus.woff","fonts/poppins-medium.woff"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()));});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x)))).then(()=>self.clients.claim()));});
 // abre na hora pelo que está guardado e busca a versão nova por trás, para a próxima abertura
